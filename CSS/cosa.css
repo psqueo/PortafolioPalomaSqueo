@@ -1,0 +1,153 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #FFC6F6;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan si es necesario */
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #575757;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem; /* Tamaño de fuente grande para los títulos */
+    margin-top: 0;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.formulario label {
+    margin: 10px 0 5px;
+}
+
+.formulario input,
+.formulario textarea {
+    width: 100%;
+    max-width: 400px; /* Limitar el ancho máximo de los campos de entrada */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.formulario button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.formulario button:hover {
+    background-color: #575757;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px auto;
+    max-width: 400px; /* Limitar el ancho máximo de la lista */
+    text-align: left; /* Alinear texto a la izquierda */
+}
+
+ul li {
+    margin: 5px 0;
+}
+
+footer.site-footer {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.container-footer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que los iconos se envuelvan si es necesario */
+}
+
+.container-footer img {
+    width: 30px;
+    height: auto;
+    margin: 5px;
+}
+
+/* Estilos responsive para móviles */
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        text-align: center;
+    }
+
+    nav ul li a {
+        padding: 10px;
+    }
+
+    .formulario {
+        padding: 0 10px; /* Añadir relleno lateral */
+    }
+
+    .formulario input,
+    .formulario textarea {
+        max-width: 90%; /* Ajustar el ancho máximo en pantallas medianas */
+    }
+
+    .container-footer img {
+        width: 25px; /* Reducir el tamaño de los iconos en pantallas medianas */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem; /* Reducir el tamaño del texto del título en pantallas pequeñas */
+    }
+
+    .formulario input,
+    .formulario textarea {
+        max-width: 100%; /* Asegurar que los campos de entrada ocupen el ancho completo en pantallas pequeñas */
+    }
+
+    .container-footer img {
+        width: 20px; /* Reducir aún más el tamaño de los iconos en pantallas muy pequeñas */
+    }
+}

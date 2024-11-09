@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/estilo.css">
+    <title>Contacto</title>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li> <a href="portfolio.html">Portfolio</a></li>
+            <li> <a href="sobremi.html">Sobre mí</a></li>
+            <li><a href="curriculum.html">Curriculum</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="habilidades.html">Habilidades</a></li>
+        </ul>
+    </nav> 
+
+    <main>
+
+    <h1>Formulario de Contacto</h1>
+
+    <form class="formulario" id="formulario">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre"/>
+        <br>
+        <label for="E-mail">Email</label>
+        <input type="text" id="E-mail" name="Email" placeholder="E-mail"/>
+        <br>
+        <label for="Mensaje">Mensaje</label>
+        <textarea placeholder="Ingrese mensaje" name="Mensaje" id="mensaje"></textarea>
+        <br>
+        <button type="submit">Enviar</button>
+    </form>
+    
+    <script>
+        document.getElementById("formulario").addEventListener("submit", function(event) {
+            // Obteniendo los valores de los campos
+            const nombre = document.getElementById("nombre").value.trim();
+            const email = document.getElementById("E-mail").value.trim();
+            const mensaje = document.getElementById("mensaje").value.trim();
+            
+            // Verificando que los campos no estén vacíos
+            if (nombre === "" || email === "" || mensaje === "") {
+                alert("Por favor, complete todos los campos.");
+                event.preventDefault(); // Evita que el formulario se envíe
+            }
+        });
+    </script>
+    <h1>Mis datos</h1>
+
+    <ul>
+        <li>Mail: paloma.squeo@gmail.com</li>
+        <li>Telefono: 1157101852</li>
+        <li>Instagram: paloma_micaelaa</li>
+        <li>Linkedin: palomasqueo</li>
+    </ul>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container-footer">
+    <img src="./img/fluent--location-16-filled.png" alt="Ubicación">
+    <img src="./img/logos--whatsapp-icon.png" alt="Whatsapp">
+    <img src="./img/skill-icons--gmail-dark.png" alt="E-mail">
+    <img src="./img/skill-icons--linkedin.png" alt="Linkedin">
+    </div>
+</footer>
+
+
+<button onclick="scrollToTop()" id="backToTop">
+    <img src="img/boton.jpg" alt="Volver Arriba">
+</button>
+
+<script src="boton.js"></script>
+
+
+</body>
+
+</html>
